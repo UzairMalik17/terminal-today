@@ -3,13 +3,14 @@ const siteMetadata = {
   title: 'Terminal Today | Modern Developer Changelogs & Release Pulse',
   author: 'Terminal Today',
   headerTitle: 'Terminal Today',
-  description: 'Automated daily updates, breaking changes, and changelogs for developer tools, backend frameworks, and open-source ecosystems.',
+  description:
+    'Automated daily updates, breaking changes, and changelogs for developer tools, backend frameworks, and open-source ecosystems.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/UzairMalik17/terminal-today',
-  siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+  siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.jpg`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.jpg`,
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'address@yoursite.com',
   github: 'https://github.com',
