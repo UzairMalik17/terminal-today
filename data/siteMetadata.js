@@ -99,6 +99,10 @@ const siteMetadata = {
     //   indexName: 'docsearch',
     // },
   },
+
+  siteVerification: {
+    googleCode: 'ZV4qkV9H38yfUk0RlG1PsuD6WYtrxcki8c8rmj9Nhxg',
+  },
 }
 
 module.exports = siteMetadata
