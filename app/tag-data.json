@@ -1,1 +1,8 @@
-{}
+{
+  "backend-architecture": 1,
+  "distributed-systems": 2,
+  "cloud-native": 2,
+  "web-performance": 1,
+  "artificial-intelligence": 1,
+  "web-development": 1
+}
