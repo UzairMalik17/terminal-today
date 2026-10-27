@@ -10,7 +10,7 @@ summary: An authoritative engineering exploration into modern runtime performanc
 
 As systems scale to handle heavier concurrent workloads and data-intensive AI integration pipelines, modern development teams face unprecedented challenges at the runtime level. Optimizing execution engines—whether dealing with Node.js memory allocations or orchestrating distributed microservices architecture—requires a deep understanding of internal mechanisms, garbage collection patterns, and network topology trade-offs.
 
-In this technical deep dive, we examine the convergence of runtime limits, native database bindings, and resilient microservices design patterns. Building upon our foundational exploration into [architectural shifts in modern backend development](/blog/architectural-shifts-in-modern-backend-development-2026), our goal is to show how core execution engines interact with modern hardware and external dependencies so that platform engineers can build predictably performant systems capable of sustaining high throughput under volatile conditions.
+In this technical deep dive, we examine the convergence of runtime limits, native database bindings, and resilient microservices design patterns. Building upon our foundational exploration into [architectural shifts in modern backend development](/blog/architectural-shifts-in-modern-backend-development-2026/), our goal is to show how core execution engines interact with modern hardware and external dependencies so that platform engineers can build predictably performant systems capable of sustaining high throughput under volatile conditions.
 
 ## Mitigating Memory Limits and Maximizing Node.js V22 Performance
 
@@ -82,7 +82,7 @@ export class PersistentCache {
 
 Scaling beyond a single node introduces distributed failure modes that demand rigorous architectural patterns. Network partitions, dropped packets, and downstream service degradation require defensive programming constructs such as circuit breakers, exponential backoff retries, and asynchronous event streaming.
 
-When designing event-driven systems, guarantees around message delivery become paramount. In alignment with our recent study on [architecting resilient distributed systems](/blog/architecting-resilient-distributed-systems-and-ai-workflows), at-least-once delivery semantics necessitate idempotent consumer patterns to prevent data corruption during retries.
+When designing event-driven systems, guarantees around message delivery become paramount. In alignment with our recent study on [architecting resilient distributed systems](/blog/architecting-resilient-distributed-systems-and-ai-workflows/), at-least-once delivery semantics necessitate idempotent consumer patterns to prevent data corruption during retries.
 
 > [!WARNING]
 > Never assume message ordering across partitioned queues unless explicitly enforced via partition keys or sequential sequence numbers in your payload schemas.

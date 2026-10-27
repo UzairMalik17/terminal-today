@@ -10,7 +10,7 @@ summary: An architectural analysis of modern concurrency paradigms, edge runtime
 
 The landscape of software engineering has reached a critical inflection point. As distributed systems scale to meet ultra-low latency demands, the traditional boundaries between centralized monolithic backends and distributed micro-frontends are dissolving. Modern runtimes are no longer merely execution environments; they are highly optimized, event-driven engines designed to run closer to the user while maintaining rigid safety, memory, and concurrency guarantees.
 
-At Terminal Today, we analyze how engineering teams build resilient architectures. Building upon our recent work on [runtime optimization and microservices resilience](/blog/next-gen-runtime-optimization-and-microservices), we recognize how modern advancements in JavaScript runtimes, WebAssembly (Wasm) sandboxes, and asynchronous concurrency primitives have fundamentally changed how we handle state, network I/O, and compute resources. Moving away from heavy, thread-per-request models toward cooperative multitasking and actor-based concurrency has unlocked unprecedented throughput, but it has also introduced new cognitive loads for systems architects.
+At Terminal Today, we analyze how engineering teams build resilient architectures. Building upon our recent work on [runtime optimization and microservices resilience](/blog/next-gen-runtime-optimization-and-microservices/), we recognize how modern advancements in JavaScript runtimes, WebAssembly (Wasm) sandboxes, and asynchronous concurrency primitives have fundamentally changed how we handle state, network I/O, and compute resources. Moving away from heavy, thread-per-request models toward cooperative multitasking and actor-based concurrency has unlocked unprecedented throughput, but it has also introduced new cognitive loads for systems architects.
 
 > [!NOTE]
 > Edge execution models require a complete re-evaluation of database connection pooling. Traditional persistent TCP connections do not map cleanly to short-lived, geographically distributed serverless isolates.
@@ -100,7 +100,7 @@ export class JSONSanitizerTransform extends Transform {
 
 The holy grail of distributed systems engineering is achieving zero-latency state synchronization globally. Traditional architectures centralized state in relational databases (like PostgreSQL) or distributed NoSQL stores (like Cassandra). However, round-trip latency to a centralized database often negates the performance benefits of deploying compute to edge nodes.
 
-Modern architectures bridge this gap through hierarchical state management, drawing on principles established in our prior exploration of [architecting resilient distributed systems and AI workflows](/blog/architecting-resilient-distributed-systems-and-ai-workflows):
+Modern architectures bridge this gap through hierarchical state management, drawing on principles established in our prior exploration of [architecting resilient distributed systems and AI workflows](/blog/architecting-resilient-distributed-systems-and-ai-workflows/):
 
 - **Cache-Aside with Local KV Stores:** Utilizing distributed key-value stores (such as Cloudflare KV or Redis Enterprise) located regionally to serve read-heavy, low-volatility data.
 - **Conflict-Free Replicated Data Types (CRDTs):** Enabling distributed nodes to mutate state locally without coordination, automatically resolving conflicts upon eventual synchronization.
@@ -112,10 +112,10 @@ Minimizing $Latency_{state_sync}$ requires careful analysis of consistency model
 
 ## Section 5: Future Outlook and Engineering Best Practices
 
-As we look toward the future of distributed systems, the convergence of WebAssembly, secure multi-tenant runtimes, and AI agent workflows will demand even tighter integration between compute and state. Following patterns outlined in our analysis of [architectural shifts in distributed systems and AI integration](/blog/architectural-shifts-in-distributed-systems-and-ai-integration), engineers must design systems that are inherently resilient, observing the following tenets:
+As we look toward the future of distributed systems, the convergence of WebAssembly, secure multi-tenant runtimes, and AI agent workflows will demand even tighter integration between compute and state. Following patterns outlined in our analysis of [architectural shifts in distributed systems and AI integration](/blog/architectural-shifts-in-distributed-systems-and-ai-integration/), engineers must design systems that are inherently resilient, observing the following tenets:
 
 - **Design for Ephemerality:** Assume compute nodes can terminate at any millisecond. Persist state externally or use robust distributed state primitives.
 - **Embrace Observability:** Implement distributed tracing with OpenTelemetry across all edge-to-origin boundaries to catch latency bottlenecks early.
 - **Validate Resource Boundaries:** Regularly test applications under simulated memory pressure and network throttling to verify graceful degradation.
 
-By mastering these concurrency primitives and runtime constraints, alongside insights gained from [modern backend development patterns](/blog/architectural-shifts-in-modern-backend-development-2026), engineering teams can build scalable, fault-tolerant systems ready for the next generation of distributed workloads.
+By mastering these concurrency primitives and runtime constraints, alongside insights gained from [modern backend development patterns](/blog/architectural-shifts-in-modern-backend-development-2026/), engineering teams can build scalable, fault-tolerant systems ready for the next generation of distributed workloads.
